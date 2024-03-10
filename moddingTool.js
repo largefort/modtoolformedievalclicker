@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Create a link and trigger download
             const downloadLink = document.createElement('a');
             downloadLink.href = url;
-            downloadLink.download = 'modConfiguration.json';
+            downloadLink.download = 'modconfiguration.json';
             document.body.appendChild(downloadLink);
             downloadLink.click();
             document.body.removeChild(downloadLink);
