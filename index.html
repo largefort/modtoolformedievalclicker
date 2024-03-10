@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modding Tool for Medieval Clicker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming styles.css contains your game's custom styles -->
+    <style>
+        body {
+          font-family: 'MedievalFont', serif;
+          background-color: #261c1a;
+          color: #f7dfc4;
+          margin: 0;
+          padding: 20px;
+        }
+        .container {
+          background-color: rgba(0, 0, 0, 0.6);
+          border: 5px solid #523b2b;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+          margin-top: 50px;
+        }
+        input, button {
+          margin: 10px 0;
+          border-radius: 10px;
+          border: 1px solid #523b2b;
+          background-color: #261c1a;
+          color: #f7dfc4;
+        }
+        button {
+          cursor: pointer;
+          padding: 5px 15px;
+        }
+        label {
+          margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medieval Clicker Modding Tool</h1>
+        <form id="modForm">
+            <h2>Unit Costs</h2>
+            <label for="knightCost">Knight Cost:</label>
+            <input type="number" id="knightCost" name="knightCost"><br>
+            <label for="archerCost">Archer Cost:</label>
+            <input type="number" id="archerCost" name="archerCost"><br>
+            <label for="wizardCost">Wizard Cost:</label>
+            <input type="number" id="wizardCost" name="wizardCost"><br>
+
+            <h2>Add New Unit</h2>
+            <label for="newUnitName">Unit Name:</label>
+            <input type="text" id="newUnitName" name="newUnitName"><br>
+            <label for="newUnitCost">Unit Cost:</label>
+            <input type="number" id="newUnitCost" name="newUnitCost"><br>
+
+            <h2>Gameplay Mechanics</h2>
+            <label for="goldMultiplier">Gold Multiplier:</label>
+            <input type="number" step="0.1" id="goldMultiplier" name="goldMultiplier"><br>
+
+            <h2>Game Theme</h2>
+            <label for="backgroundImage">Background Image URL:</label>
+            <input type="text" id="backgroundImage" name="backgroundImage"><br>
+
+            <button type="button" onclick="generateMod()">Generate Mod</button>
+        </form>
+    </div>
+    <script src="moddingTool.js"></script>
+</body>
+</html>
